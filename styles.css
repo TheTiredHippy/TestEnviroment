@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 
 :root {
-  --teal: #00b2b2;
+  --dark: #003333;
   --brown: #ba6a34;
   --bluegray: #5c7c89;
-  --dark: #003333;
+  --teal: #00b2b2;
 }
 
 body {
