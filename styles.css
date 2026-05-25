@@ -1,6 +1,7 @@
 html {
   font-size: 200%;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 
 :root {
@@ -17,18 +18,34 @@ body {
   color: white;
 }
 
+/* HEADER + BANNER LAYOUT */
 header {
-  text-align: center;
-  padding: 20px;
   border-bottom: 3px solid var(--teal);
 }
 
-.logo {
-  max-width: 120px;
-  display: block;
-  margin: 0 auto 10px auto;
+.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
 }
 
+/* LOGO */
+.logo {
+  width: 80px;
+  height: auto;
+  margin: 0;
+}
+
+/* BANNER IMAGE */
+.banner {
+  max-height: 80px;
+  width: auto;
+}
+
+/* NAV BAR */
 nav {
   display: flex;
   justify-content: center;
@@ -48,12 +65,20 @@ nav a:hover {
   background: var(--teal);
 }
 
+nav a.active {
+  background: var(--teal);
+  color: var(--dark);
+  font-weight: bold;
+}
+
+/* MAIN CONTENT */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 20px;
 }
 
+/* CONTENT BOXES */
 .card {
   background: rgba(255,255,255,0.05);
   border-left: 4px solid var(--teal);
@@ -62,6 +87,7 @@ nav a:hover {
   border-radius: 10px;
 }
 
+/* FORM ELEMENTS */
 input, button {
   padding: 10px;
   margin-top: 10px;
@@ -72,28 +98,4 @@ button {
   border: none;
   color: black;
   cursor: pointer;
-}
-nav a.active {
-  background: #00b2b2;
-  color: #003333;
-  font-weight: bold;
-}
-.topbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-  border-bottom: 3px solid var(--teal);
-}
-
-.logo {
-  width: 80px;
-  height: auto;
-}
-
-.banner {
-  max-height: 80px;
-  width: auto;
 }
