@@ -18,7 +18,7 @@ body {
   color: white;
 }
 
-/* HEADER */
+/* HEADER LAYOUT */
 header {
   border-bottom: 3px solid var(--teal);
 }
@@ -26,12 +26,11 @@ header {
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
   padding: 15px 40px;
 }
 
-/* SIDE IMAGES (logo + seal) */
+/* LEFT + RIGHT IMAGES (logo + seal) */
 .sideimg {
   width: 120px;
   height: auto;
@@ -43,7 +42,7 @@ header {
   width: auto;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
@@ -69,14 +68,14 @@ nav a.active {
   font-weight: bold;
 }
 
-/* MAIN CONTENT */
+/* PAGE CONTENT */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 20px;
 }
 
-/* CARDS */
+/* CONTENT BOXES */
 .card {
   background: rgba(255,255,255,0.05);
   border-left: 4px solid var(--teal);
