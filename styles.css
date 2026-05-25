@@ -18,34 +18,31 @@ body {
   color: white;
 }
 
-/* HEADER + BANNER LAYOUT */
+/* HEADER LAYOUT */
 header {
   border-bottom: 3px solid var(--teal);
 }
 
 .topbar {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
+  justify-content: space-between;
+  padding: 15px 40px;
 }
 
-/* LOGO */
-.logo {
-  width: 160px;
+/* LEFT + RIGHT IMAGES (logo + seal) */
+.sideimg {
+  width: 120px;
   height: auto;
-  margin: 0;
 }
 
-/* BANNER IMAGE */
+/* CENTER BANNER */
 .banner {
   max-height: 160px;
   width: auto;
 }
 
-/* NAV BAR */
+/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
@@ -71,7 +68,7 @@ nav a.active {
   font-weight: bold;
 }
 
-/* MAIN CONTENT */
+/* PAGE CONTENT */
 .container {
   max-width: 900px;
   margin: auto;
@@ -87,7 +84,7 @@ nav a.active {
   border-radius: 10px;
 }
 
-/* FORM ELEMENTS */
+/* FORMS */
 input, button {
   padding: 10px;
   margin-top: 10px;
