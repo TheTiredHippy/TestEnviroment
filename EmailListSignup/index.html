@@ -22,15 +22,16 @@
 <div class="container">
 
   <div class="card">
+
     <h2>Join The Email List</h2>
-    <p>Get updates on Drops, Festival Locations, and Sales!</p>
+    <p>Get updates on drops, festival locations, and sales.</p>
 
     <form id="signup-form"
-          action="https://script.google.com/u/0/home/projects/1n-HFs7_Ci9ZoWolSdiyGoOsedX4YLlDork7sBM5rUHemtNdqOMwp00Ie/edit"
+          action="https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbzGyLmkjiHfes3BlRH3mutDpqyK2GqmFNCx98Kh6ca5dKHqkiy-wGAcM-Ucog_cy298zg/exec/exec"
           method="POST"
           target="hidden_iframe">
 
-      <input type="text" name="name" placeholder="Preferred Name" required>
+      <input type="text" name="name" placeholder="Name" required>
       <br>
 
       <input type="email" name="email" placeholder="Email" required>
@@ -39,12 +40,12 @@
       <input type="text" name="city" placeholder="City (optional)">
       <br><br>
 
-      <button type="submit">Submit!</button>
+      <button type="submit">Sign Up</button>
 
     </form>
 
     <p id="success-message" style="display:none; color:green; font-weight:bold;">
-      Thanks! You’re on the list.
+      You’re on the list.
     </p>
 
     <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -58,8 +59,10 @@
   const message = document.getElementById("success-message");
 
   form.addEventListener("submit", function () {
-    message.style.display = "block";
-    form.reset();
+    setTimeout(() => {
+      message.style.display = "block";
+      form.reset();
+    }, 300);
   });
 </script>
 
