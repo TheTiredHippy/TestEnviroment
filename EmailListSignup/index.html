@@ -26,12 +26,9 @@
     <h2>Join The Email List</h2>
     <p>Get updates on drops, festival locations, and sales.</p>
 
-    <form id="signup-form"
-          action="https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbzGyLmkjiHfes3BlRH3mutDpqyK2GqmFNCx98Kh6ca5dKHqkiy-wGAcM-Ucog_cy298zg/exec/exec"
-          method="POST"
-          target="hidden_iframe">
+    <form>
 
-      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="name" placeholder="Preferred Name" required>
       <br>
 
       <input type="email" name="email" placeholder="Email" required>
@@ -44,27 +41,9 @@
 
     </form>
 
-    <p id="success-message" style="display:none; color:green; font-weight:bold;">
-      You’re on the list.
-    </p>
-
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
-
   </div>
 
 </div>
-
-<script>
-  const form = document.getElementById("signup-form");
-  const message = document.getElementById("success-message");
-
-  form.addEventListener("submit", function () {
-    setTimeout(() => {
-      message.style.display = "block";
-      form.reset();
-    }, 300);
-  });
-</script>
 
 </body>
 </html>
