@@ -96,3 +96,11 @@ button {
   color: black;
   cursor: pointer;
 }
+
+.container a {
+  color: var(--brown);
+}
+
+.container a:hover {
+  color: var(--teal);
+}
