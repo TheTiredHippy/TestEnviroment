@@ -109,3 +109,19 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 768px) {
+
+  .topbar {
+    padding: 10px 5px;
+  }
+
+  .sideimg {
+    width: 60px;
+  }
+
+  .banner {
+    max-height: 90px;
+  }
+
+}
