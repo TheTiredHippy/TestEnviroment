@@ -13,7 +13,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Aladin', cursive;
+  font-family: Arial, sans-serif;
   background: var(--dark);
   color: white;
 }
