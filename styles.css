@@ -26,7 +26,7 @@ header {
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 15px 40px;
 }
 
