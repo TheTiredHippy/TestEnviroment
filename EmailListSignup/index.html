@@ -7,32 +7,51 @@
 
 <body>
 
-<h2>Join The Email List</h2>
-<p>Get updates on drops, events, and sales.</p>
+<header class="topbar">
+  <img src="../banner.png" class="banner">
+</header>
 
-<form id="signup-form"
-      action="https://script.google.com/macros/s/AKfycbxo5Z02Dhn0YdgDGOPua2bGkcOJ2nlVmxQm7GjsYEbKS24J76D5GBy9UTJk8BohaBIvtw/exec"
-      method="POST"
-      target="hidden_iframe">
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../FindMeAtTheseEvents/">Live Events</a>
+  <a href="../NewsAndSales/">News, Drops & Sales</a>
+  <a href="../EmailListSignup/" class="active">Email List Signup</a>
+</nav>
 
-  <input type="text" name="name" placeholder="Name" required>
-  <br>
+<div class="container">
 
-  <input type="email" name="email" placeholder="Email" required>
-  <br>
+  <div class="card">
 
-  <input type="text" name="city" placeholder="City (optional)">
-  <br><br>
+    <h2>Join The Email List</h2>
+    <p>Get updates on drops, events, and sales.</p>
 
-  <button type="submit">Sign Up</button>
+    <form id="signup-form"
+          action="PASTE_YOUR_SCRIPT_URL_HERE"
+          method="POST"
+          target="hidden_iframe">
 
-</form>
+      <input type="text" name="name" placeholder="Name" required>
+      <br>
 
-<p id="success" style="display:none; color:green; font-weight:bold;">
-  Thanks! You’re on the list.
-</p>
+      <input type="email" name="email" placeholder="Email" required>
+      <br>
 
-<iframe name="hidden_iframe" style="display:none;"></iframe>
+      <input type="text" name="city" placeholder="City (optional)">
+      <br><br>
+
+      <button type="submit">Sign Up</button>
+
+    </form>
+
+    <p id="success" style="display:none; color:green; font-weight:bold;">
+      Thanks! You’re on the list.
+    </p>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  </div>
+
+</div>
 
 <script>
   const form = document.getElementById("signup-form");
