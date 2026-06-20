@@ -96,17 +96,3 @@ button {
   color: black;
   cursor: pointer;
 }
-
-/* GLOBAL LINK STYLING (THIS IS WHAT FIXES YOUR ISSUE) */
-a {
-  color: var(--teal);
-  text-decoration: underline;
-}
-
-a:hover {
-  color: var(--brown);
-}
-
-a:visited {
-  color: var(--bluegray);
-}
