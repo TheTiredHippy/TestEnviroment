@@ -109,3 +109,22 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 768px) {
+
+  .topbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 10px;
+  }
+
+  .sideimg {
+    width: 60px;
+  }
+
+  .banner {
+    max-height: 90px;
+  }
+
+}
