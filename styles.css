@@ -109,18 +109,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-input,
-button {
-  font-size: 18px;
-  padding: 12px;
-}
-
-input[type="checkbox"] {
-  transform: scale(1.5);
-  margin-right: 8px;
-}
-
-label {
-  font-size: 18px;
-}
