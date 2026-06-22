@@ -208,3 +208,36 @@ label {
 .footer a:hover {
   color: var(--brown);
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  border-top: 2px solid var(--teal);
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.footer-left p {
+  margin: 5px 0;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-right a {
+  background: var(--brown);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  background: var(--teal);
+  color: var(--dark);
+}
