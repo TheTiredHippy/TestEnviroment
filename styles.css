@@ -213,10 +213,10 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 36px 40px;
+  padding: 44px 48px;
   margin-top: 60px;
   border-top: 2px solid var(--teal);
-  font-size: 22px;
+  font-size: 26px;
   opacity: 0.8;
 }
 
