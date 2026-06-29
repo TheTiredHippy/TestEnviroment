@@ -20,9 +20,9 @@
 
 <div class="container">
 
-<div style="user-select: text; color: rgba(0,0,0,0); text-shadow: none;">
-01001001 01101110 01110011 01110000 01100101 01100011 01110100 00100000 01110100 01101000 01101001 01101110 01100111 01110011 00100000 01100001 00100000 01100010 01101001 01110100 00100000 01100011 01101100 01101111 01110011 01100101 01110010 00101110 00100000
-</div>
+  <div id="clue" style="color: rgba(0,0,0,0.01); cursor: pointer;">
+    Tap here if something feels off.
+  </div>
 
 </div>
 
@@ -42,6 +42,16 @@
     </a>
   </div>
 </footer>
+
+<script>
+  const clue = document.getElementById("clue");
+
+  clue.addEventListener("click", () => {
+    clue.style.color = "#000";
+    clue.style.opacity = "1";
+    clue.textContent = "You found the first clue.";
+  });
+</script>
 
 </body>
 </html>
