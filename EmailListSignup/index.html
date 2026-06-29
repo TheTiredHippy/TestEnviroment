@@ -1,20 +1,24 @@
 <!doctype html>
 <html>
 <head>
-  <title>Email Signup</title>
+  <title>The Tired Hippy Co - Email Signup</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header class="topbar">
-  <img src="../banner.png" class="banner">
+  <a href="/">
+    <img src="../banner.png" class="banner" alt="The Tired Hippy Co">
+  </a>
 </header>
 
 <nav>
-  <a href="../index.html">Home</a>
-  <a href="../FindMeAtTheseEvents/">Live Events</a>
+  <a href="/">Home</a>
   <a href="../NewsAndSales/">News, Drops & Sales</a>
+  <a href="../FindMeAtTheseEvents/">Live Events</a>
   <a href="../EmailListSignup/" class="active">Email List Signup</a>
 </nav>
 
@@ -27,8 +31,7 @@
 
     <form id="signup-form"
           action="https://script.google.com/macros/s/AKfycbze3xD0xzSEBMKct4XJ6_CKUEK4AqxuhUtzKgEDxBs36CtFA2oEYLS4MdWdKDhnwLhydA/exec"
-          method="POST"
-          target="hidden_iframe">
+          method="POST">
 
       <input type="text" name="name" placeholder="Preferred Name" required>
       <br>
@@ -43,11 +46,7 @@
 
     </form>
 
-    <p id="success" style="display:none; color:green; font-weight:bold;">
-      Thanks! You’re on the list.
-    </p>
-
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <p id="status" style="display:none; font-weight:bold;"></p>
 
   </div>
 
@@ -55,15 +54,55 @@
 
 <script>
   const form = document.getElementById("signup-form");
-  const success = document.getElementById("success");
+  const status = document.getElementById("status");
 
-  form.addEventListener("submit", function () {
-    setTimeout(() => {
-      success.style.display = "block";
-      form.reset();
-    }, 300);
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    status.style.display = "block";
+    status.style.color = "black";
+    status.textContent = "Submitting...";
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData
+      });
+
+      if (res.ok) {
+        status.style.color = "green";
+        status.textContent = "Thanks! You’re on the list.";
+        form.reset();
+      } else {
+        status.style.color = "red";
+        status.textContent = "Something went wrong. Try again.";
+      }
+
+    } catch (err) {
+      status.style.color = "red";
+      status.textContent = "Network error. Try again.";
+    }
   });
 </script>
+
+<footer class="footer">
+  <div class="footer-left">
+    <p>The Tired Hippy Co™</p>
+    <p>All artwork and logos protected © 2025–2026</p>
+  </div>
+
+  <div class="footer-right">
+    <a href="mailto:business@thetiredhippy.com?subject=Business%20Inquiry%20-%20The%20Tired%20Hippy%20Co">
+      Contact (Email)
+    </a>
+
+    <a href="#">
+      Mystery
+    </a>
+  </div>
+</footer>
 
 </body>
 </html>
