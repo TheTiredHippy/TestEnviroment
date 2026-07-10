@@ -241,3 +241,23 @@ label {
   background: var(--teal);
   color: var(--dark);
 }
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 15px 5px;
+}
+
+.gallery img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--bluegray);
+  flex-shrink: 0;
+}
+
+.gallery img:hover {
+  border-color: var(--teal);
+}
